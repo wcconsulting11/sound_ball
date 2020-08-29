@@ -9,7 +9,7 @@ body {
 }
 
 .app {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -24,7 +24,6 @@ header h1 {
 
 header p {
     font-size: 20px;
-
 }
 
 .pads {
@@ -63,7 +62,22 @@ header p {
     background: purple;
 }
 
-.visual >div {
+@keyframes jump {
+    0% {
+        bottom: 0%;
+        left: 20%;
+    }
+    50% {
+        bottom: 50%;
+        left: 50%;
+    }
+    100% {
+        bottom: 00%;
+        left: 80%;
+    }
+}
+
+.visual > div {
     position: absolute;
     bottom: 0%;
     height: 50px;
@@ -71,19 +85,4 @@ header p {
     border-radius: 50%;
     transform: scale(1);
     z-index: -1;
-}
-
-@keyframes jump {
-    0% {
-        bottom: 0%;
-        left: 20%;
-    }
-    50% {
-        bottom: 0%;
-        left: 50%;
-    }
-    100% {
-        bottom: 00%;
-        left: 80%;
-    }
 }
